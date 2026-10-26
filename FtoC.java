@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class erm
+class FtoC
 {
     public static void main(String[] args)
     {
