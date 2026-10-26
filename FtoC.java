@@ -1,3 +1,5 @@
+package javaStuff;
+
 import java.util.Scanner;
 
 class FtoC
