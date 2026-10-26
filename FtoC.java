@@ -11,6 +11,6 @@ class FtoC
       double initialTemp = Double.parseDouble(temp.nextLine());
       double convertedTemp;
       convertedTemp = ((initialTemp - 32.0) * (5.0/9.0));
-      System.out.println(convertedTemp);
+      System.out.printf("%f",convertedTemp);
     }
 }
