@@ -7,6 +7,8 @@ public class erm
     int x1 = 1, x2 = 2, x3 = 3;
     int y1 = 1, y2 = 2, y3 = 3;
 
+    private Location location = new Location();
+
     public void main(String[] args)
     {
         System.out.println("|---|---|---|");
@@ -22,16 +24,16 @@ public class erm
         switch (e.getKeyCode())
         {
             case KeyEvent.VK_UP:
-                Location.x--;
+                location.x--;
                 break;
             case KeyEvent.VK_DOWN:
-                Location.x++;
+                location.x++;
                 break;
             case KeyEvent.VK_LEFT:
-                Location.y--;
+                location.y--;
                 break;
             case KeyEvent.VK_RIGHT:
-                Location.y++;
+                location.y++;
                 break;
         }
     }
