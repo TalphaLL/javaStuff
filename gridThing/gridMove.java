@@ -2,7 +2,7 @@ package gridThing;
 
 import java.util.Scanner;
 
-class erm
+class gridMove
 {
     String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
     int x1 = 1, x2 = 2, x3 = 3;
