@@ -3,14 +3,12 @@ import javax.swing.*;
 
 public class erm
 {
-    static String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
-    static int x1 = 1, x2 = 2, x3 = 3;
-    static int y1 = 1, y2 = 2, y3 = 3;
+    String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
+    int x1 = 1, x2 = 2, x3 = 3;
+    int y1 = 1, y2 = 2, y3 = 3;
 
-    public static void main(String[] args)
+    public void main(String[] args)
     {
-        int currentPosX = x2;
-        int currentPosY = y2;
         System.out.println("|---|---|---|");
         System.out.println("|" + " " + n1 + " " + "|" + " " + n2 + " " + "|" + " " + n3 + " " + "|");
         System.out.println("|---|---|---|");
@@ -18,16 +16,22 @@ public class erm
         System.out.println("|---|---|---|");
         System.out.println("|" + " " + n7 + " " + "|" + " " + n8 + " " + "|" + " " + n9 + " " + "|");
         System.out.println("|---|---|---|");
-
     }
-    public void Keypressed(KeyEvent e)
+    void KeyPressed()
     {
-      int c = e.getKeyCode();
-      if (c == KeyEvent.VK_UP)
+      if (key == CODED)
       {
-        n2 = "x";
+        if (keyCode == up)
+        {
+          Location.x--;
+        }
       }
     }
+}
+public class Location
+{
+  int x = 2;
+  int y = 2;
 }
 /*
 11 12 13
