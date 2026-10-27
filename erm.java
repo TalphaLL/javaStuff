@@ -1,6 +1,4 @@
-import java.awt.event.*;
-import javax.swing.*;
-
+import java.awt.event.KeyEvent;
 public class erm
 {
     String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
@@ -17,21 +15,24 @@ public class erm
         System.out.println("|" + " " + n7 + " " + "|" + " " + n8 + " " + "|" + " " + n9 + " " + "|");
         System.out.println("|---|---|---|");
     }
-    void KeyPressed()
+    public void KeyPressed(KeyEvent e)
     {
-      if (key == CODED)
-      {
-        if (keyCode == up)
+        switch (e.getKeyCode())
         {
-          Location.x--;
+            case KeyEvent.VK_UP:
+                Location.x--;
+                break;
+            case KeyEvent.VK_DOWN:
+                Location.x++;
+                break;
+            case KeyEvent.VK_LEFT:
+                Location.y--;
+                break;
+            case KeyEvent.VK_RIGHT:
+                Location.y++;
+                break;
         }
-      }
     }
-}
-public class Location
-{
-  int x = 2;
-  int y = 2;
 }
 /*
 11 12 13
