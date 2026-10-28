@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class gridMove
 {
-    boolean o = true;
-    Location location = new Location();
+    boolean o = true; //temp till I find a better way
+    MiscVariables pos = new MiscVariables();
     grid gridcode = new grid();
 
     void main(String[] args)
@@ -19,9 +19,9 @@ class gridMove
             {
                 case "w":
                 {
-                    if (location.x != 1)
+                    if (pos.x != 1)
                     {
-                        location.x--;
+                        pos.x--;
                         System.out.println("Moved Up");
                         break;
                     }
@@ -33,9 +33,9 @@ class gridMove
                 }
                 case "a":
                 {
-                    if (location.y != 1)
+                    if (pos.y != 1)
                     {
-                        location.y--;
+                        pos.y--;
                         System.out.println("Moved Left");
                         break;
                     }
@@ -47,9 +47,9 @@ class gridMove
                 }
                 case "s":
                 {
-                    if (location.x != 3)
+                    if (pos.x != 3)
                     {
-                        location.x++;
+                        pos.x++;
                         System.out.println("Moved Down");
                         break;
                     }
@@ -61,9 +61,9 @@ class gridMove
                 }
                 case "d":
                 {
-                    if (location.y != 3)
+                    if (pos.y != 3)
                     {
-                        location.y++;
+                        pos.y++;
                         System.out.println("Moved Right");
                         break;
                     }
