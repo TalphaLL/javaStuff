@@ -4,22 +4,13 @@ import java.util.Scanner;
 
 class gridMove
 {
-    String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
-    int x1 = 1, x2 = 2, x3 = 3;
-    int y1 = 1, y2 = 2, y3 = 3;
     boolean o = true;
-
     Location location = new Location();
+    grid gridcode = new grid();
 
-    public void main(String[] args)
+    void main(String[] args)
     {
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n1 + " " + "|" + " " + n2 + " " + "|" + " " + n3 + " " + "|");
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n4 + " " + "|" + " " + n5 + " " + "|" + " " + n6 + " " + "|");
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n7 + " " + "|" + " " + n8 + " " + "|" + " " + n9 + " " + "|");
-        System.out.println("|---|---|---|");
+        gridcode.gridBuild();
         while (o)
         {
             Scanner input = new Scanner(System.in);
@@ -84,6 +75,7 @@ class gridMove
                 }
                 default:
                 {
+                    System.out.println("Wrong key");
                     break;
                 }
             }
