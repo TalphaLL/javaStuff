@@ -1,9 +1,5 @@
 package gridThing;
 
-class CurrentPos
-{
-    public int x = 2, y = 2;
-}
 class Numbers
 {
     String[] nums = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -21,14 +17,4 @@ class grid
         System.out.println("|" + " " + numbs.nums[6] + " " + "|" + " " + numbs.nums[7] + " " + "|" + " " + numbs.nums[8] + " " + "|");
         System.out.println("|---|---|---|");
     }
-}
-class visualPosition
-{
-    CurrentPos pos = new CurrentPos();
-    String previousPos;
-    public void pos()
-    {
-
-    }
-
 }

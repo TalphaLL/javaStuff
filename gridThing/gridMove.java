@@ -5,11 +5,14 @@ import java.util.Scanner;
 class gridMove
 {
     boolean o = true; //temp till I find a better way
-    CurrentPos pos = new CurrentPos();
     grid gridcode = new grid();
 
     void main(String[] args)
     {
+        int[][] coords = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+        int row = 1;
+        int col = 1;
+        int pos = coords[row][col];
         gridcode.gridBuild();
         while (o)
         {
@@ -19,9 +22,9 @@ class gridMove
             {
                 case "w":
                 {
-                    if (pos.x != 1)
+                    if (row != 0)
                     {
-                        pos.x--;
+                        row--;
                         System.out.println("Moved Up");
                         break;
                     }
@@ -33,9 +36,9 @@ class gridMove
                 }
                 case "a":
                 {
-                    if (pos.y != 1)
+                    if (col != 0)
                     {
-                        pos.y--;
+                        col--;
                         System.out.println("Moved Left");
                         break;
                     }
@@ -47,9 +50,9 @@ class gridMove
                 }
                 case "s":
                 {
-                    if (pos.x != 3)
+                    if (row != 2)
                     {
-                        pos.x++;
+                        row++;
                         System.out.println("Moved Down");
                         break;
                     }
@@ -61,9 +64,9 @@ class gridMove
                 }
                 case "d":
                 {
-                    if (pos.y != 3)
+                    if (col != 2)
                     {
-                        pos.y++;
+                        col++;
                         System.out.println("Moved Right");
                         break;
                     }
@@ -83,19 +86,12 @@ class gridMove
     }
 }
 /*
-11 12 13
-21 22 23
-31 32 33
-
-n1 = x1, y1 | n2 = x1, y2 | n3 = x1, y3
-n4 = x2, y1 | n5 = x2, y2 | n6 = x2, y3
-n7 = x3, y1 | n8 = x3, y2 | n9 = x3, y3
-
-|---|---|---|
-| 1 | 2 | 3 |
-|---|---|---|
-| 4 | 5 | 6 |
-|---|---|---|
-| 7 | 8 | 9 |
-|---|---|---|
+    c0  c1  c2
+   |---|---|---|
+r0 | 1 | 2 | 3 |
+   |---|---|---|
+r1 | 4 | 5 | 6 |
+   |---|---|---|
+r2 | 7 | 8 | 9 |
+   |---|---|---|
 */
