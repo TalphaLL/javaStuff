@@ -9,11 +9,9 @@ class gridMove
 
     void main(String[] args)
     {
-        int[][] coords = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
-        int row = 1;
-        int col = 1;
-        int pos = coords[row][col];
+        gridArray pos = new gridArray();
         gridcode.gridBuild();
+        System.out.println("SEND ONE: W A S D");
         while (o)
         {
             Scanner input = new Scanner(System.in);
@@ -22,9 +20,9 @@ class gridMove
             {
                 case "w":
                 {
-                    if (row != 0)
+                    if (pos.row != 0)
                     {
-                        row--;
+                        pos.row--;
                         System.out.println("Moved Up");
                         break;
                     }
@@ -36,9 +34,9 @@ class gridMove
                 }
                 case "a":
                 {
-                    if (col != 0)
+                    if (pos.col != 0)
                     {
-                        col--;
+                        pos.col--;
                         System.out.println("Moved Left");
                         break;
                     }
@@ -50,9 +48,9 @@ class gridMove
                 }
                 case "s":
                 {
-                    if (row != 2)
+                    if (pos.row != 2)
                     {
-                        row++;
+                        pos.row++;
                         System.out.println("Moved Down");
                         break;
                     }
@@ -64,9 +62,9 @@ class gridMove
                 }
                 case "d":
                 {
-                    if (col != 2)
+                    if (pos.col != 2)
                     {
-                        col++;
+                        pos.col++;
                         System.out.println("Moved Right");
                         break;
                     }
