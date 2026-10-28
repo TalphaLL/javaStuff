@@ -22,7 +22,7 @@ class grid
         System.out.println("|---|---|---|");
     }
 }
-class currentPosition
+class visualPosition
 {
     CurrentPos pos = new CurrentPos();
     String previousPos;
