@@ -5,7 +5,7 @@ import java.util.Scanner;
 class gridMove
 {
     boolean o = true; //temp till I find a better way
-    MiscVariables pos = new MiscVariables();
+    CurrentPos pos = new CurrentPos();
     grid gridcode = new grid();
 
     void main(String[] args)
