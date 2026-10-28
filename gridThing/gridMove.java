@@ -11,6 +11,7 @@ class gridMove
     {
         gridArray pos = new gridArray();
         gridcode.gridBuild();
+        xToGrid rebuild = new xToGrid();
         System.out.println("SEND ONE: W A S D");
         while (o)
         {
@@ -23,11 +24,14 @@ class gridMove
                     if (pos.row != 0)
                     {
                         pos.row--;
+                        rebuild.currentNumber();
+                        gridcode.gridBuild();
                         System.out.println("Moved Up");
                         break;
                     }
                     else
                     {
+                        gridcode.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -37,11 +41,14 @@ class gridMove
                     if (pos.col != 0)
                     {
                         pos.col--;
+                        rebuild.currentNumber();
+                        gridcode.gridBuild();
                         System.out.println("Moved Left");
                         break;
                     }
                     else
                     {
+                        gridcode.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -51,11 +58,14 @@ class gridMove
                     if (pos.row != 2)
                     {
                         pos.row++;
+                        rebuild.currentNumber();
+                        gridcode.gridBuild();
                         System.out.println("Moved Down");
                         break;
                     }
                     else
                     {
+                        gridcode.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -65,11 +75,14 @@ class gridMove
                     if (pos.col != 2)
                     {
                         pos.col++;
+                        rebuild.currentNumber();
+                        gridcode.gridBuild();
                         System.out.println("Moved Right");
                         break;
                     }
                     else
                     {
+                        gridcode.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }

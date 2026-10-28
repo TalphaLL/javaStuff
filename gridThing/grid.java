@@ -2,56 +2,38 @@ package gridThing;
 
 public class grid
 {
-    public String n1 = "1", n2 = "2", n3 = "3", n4 = "4", n5 = "5", n6 = "6", n7 = "7", n8 = "8", n9 = "9";
+    gridArray nums = new gridArray();
 
     void gridBuild()
     {
         System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n1 + " " + "|" + " " + n2 + " " + "|" + " " + n3 + " " + "|");
+        System.out.println("|" + " " + nums.coords[0][0] + " " + "|" + " " + nums.coords[0][1] + " " + "|" + " " + nums.coords[0][2] + " " + "|");
         System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n4 + " " + "|" + " " + n5 + " " + "|" + " " + n6 + " " + "|");
+        System.out.println("|" + " " + nums.coords[1][0] + " " + "|" + " " + nums.coords[1][1] + " " + "|" + " " + nums.coords[1][2] + " " + "|");
         System.out.println("|---|---|---|");
-        System.out.println("|" + " " + n7 + " " + "|" + " " + n8 + " " + "|" + " " + n9 + " " + "|");
+        System.out.println("|" + " " + nums.coords[2][0] + " " + "|" + " " + nums.coords[2][1] + " " + "|" + " " + nums.coords[2][2] + " " + "|");
         System.out.println("|---|---|---|");
     }
 }
 class gridArray
 {
-    int[][] coords = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    String[][] coords = { {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} };
     int row = 1;
     int col = 1;
-    int pos = coords[row][col];
+    String pos = coords[row][col];
 }
 class xToGrid
 {
-    String gridPos;
-    gridArray pos = new gridArray();
-    grid num = new grid();
+    gridArray gridPos = new gridArray();
     int prevX, prevY;
-    int currentX, currentY;
+    String prevNumber;
     void currentNumber()
     {
-        if (pos.row == 0 && pos.col == 0 )
-        {
-            int tempY = pos.row, tempX = pos.col;
-            gridPos = "1";
-            num.n1 = "x";
-        }
-        if (pos.row == 1 && pos.col == 0);
-        {
-
-        }
-    }
-    void previousNumber()
-    {
-        if (prevX == 0 && prevY == 0)
-        {
-            num.n1 = "1";
-        }
-        if (prevX == 1 && prevY == 0)
-        {
-
-        }
+        prevNumber = gridPos.coords[prevY][prevX];
+        gridPos.coords[gridPos.row][gridPos.col] = "x";
+        prevY = gridPos.row;
+        prevX = gridPos.col;
+        prevNumber = gridPos.coords[prevY][prevX];
     }
 }
 
