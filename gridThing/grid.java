@@ -17,10 +17,10 @@ public class grid
 }
 class gridArray
 {
-    String[][] coords = { {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} };
-    int row = 1;
-    int col = 1;
-    String pos = coords[row][col];
+    public String[][] coords = { {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} };
+    public int row = 1;
+    public int col = 1;
+    public String pos = coords[row][col];
 }
 class xToGrid
 {
@@ -29,7 +29,10 @@ class xToGrid
     String prevNumber;
     void currentNumber()
     {
-        prevNumber = gridPos.coords[prevY][prevX];
+        if (prevX != 0 || prevY != 0)
+        {
+            prevNumber = gridPos.coords[prevY][prevX];
+        }
         gridPos.coords[gridPos.row][gridPos.col] = "x";
         prevY = gridPos.row;
         prevX = gridPos.col;
