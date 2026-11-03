@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 class Main
 {
-    boolean o = true; //temp till I find a better way
-    grid gridcode = new grid();
-
-    void main(String[] args)
+    static boolean o = true; //temp till I find a better way
+    static void main(String[] args)
     {
         gridArray pos = new gridArray();
-        gridcode.gridBuild();
+        grid.gridBuild();
         xToGrid rebuild = new xToGrid();
         System.out.println("SEND ONE: W A S D");
         while (o)
@@ -25,13 +23,13 @@ class Main
                     {
                         pos.row--;
                         rebuild.currentNumber();
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("Moved Up");
                         break;
                     }
                     else
                     {
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -42,13 +40,13 @@ class Main
                     {
                         pos.col--;
                         rebuild.currentNumber();
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("Moved Left");
                         break;
                     }
                     else
                     {
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -59,13 +57,13 @@ class Main
                     {
                         pos.row++;
                         rebuild.currentNumber();
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("Moved Down");
                         break;
                     }
                     else
                     {
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
@@ -76,13 +74,13 @@ class Main
                     {
                         pos.col++;
                         rebuild.currentNumber();
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("Moved Right");
                         break;
                     }
                     else
                     {
-                        gridcode.gridBuild();
+                        grid.gridBuild();
                         System.out.println("You hit a wall");
                         break;
                     }
