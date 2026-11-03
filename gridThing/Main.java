@@ -19,9 +19,9 @@ class Main
             {
                 case "w":
                 {
-                    if (pos.row != 0)
+                    if (gridArray.row != 0)
                     {
-                        pos.row--;
+                        gridArray.row--;
                         rebuild.currentNumber();
                         grid.gridBuild();
                         System.out.println("Moved Up");
@@ -36,9 +36,9 @@ class Main
                 }
                 case "a":
                 {
-                    if (pos.col != 0)
+                    if (gridArray.col != 0)
                     {
-                        pos.col--;
+                        gridArray.col--;
                         rebuild.currentNumber();
                         grid.gridBuild();
                         System.out.println("Moved Left");
@@ -53,9 +53,9 @@ class Main
                 }
                 case "s":
                 {
-                    if (pos.row != 2)
+                    if (gridArray.row != 2)
                     {
-                        pos.row++;
+                        gridArray.row++;
                         rebuild.currentNumber();
                         grid.gridBuild();
                         System.out.println("Moved Down");
@@ -70,9 +70,9 @@ class Main
                 }
                 case "d":
                 {
-                    if (pos.col != 2)
+                    if (gridArray.col != 2)
                     {
-                        pos.col++;
+                        gridArray.col++;
                         rebuild.currentNumber();
                         grid.gridBuild();
                         System.out.println("Moved Right");

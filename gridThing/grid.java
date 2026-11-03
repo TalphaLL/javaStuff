@@ -15,26 +15,25 @@ public class grid
 }
 class gridArray
 {
-    static public String[][] coords = { {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} };
-    public int row = 1;
-    public int col = 1;
+    public static String[][] coords = { {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} };
+    public static int row = 1;
+    public static int col = 1;
     public String pos = coords[row][col];
 }
 class xToGrid
 {
-    gridArray gridPos = new gridArray();
     int prevX, prevY;
     String prevNumber;
     void currentNumber()
     {
         if (prevX != 0 || prevY != 0)
         {
-            prevNumber = gridPos.coords[prevY][prevX];
+            prevNumber = gridArray.coords[prevY][prevX];
         }
-        gridPos.coords[gridPos.row][gridPos.col] = "x";
-        prevY = gridPos.row;
-        prevX = gridPos.col;
-        prevNumber = gridPos.coords[prevY][prevX];
+        gridArray.coords[gridArray.row][gridArray.col] = "x";
+        prevY = gridArray.row;
+        prevX = gridArray.col;
+        prevNumber = gridArray.coords[prevY][prevX];
     }
 }
 
