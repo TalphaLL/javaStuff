@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Main
 {
     static boolean o = true; //temp till I find a better way
-    static void main(String[] args)
+    static void main()
     {
         grid.gridBuild();
         xToGrid rebuild = new xToGrid();
