@@ -7,7 +7,6 @@ class Main
     static boolean o = true; //temp till I find a better way
     static void main(String[] args)
     {
-        gridArray pos = new gridArray();
         grid.gridBuild();
         xToGrid rebuild = new xToGrid();
         System.out.println("SEND ONE: W A S D");
