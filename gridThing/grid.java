@@ -1,6 +1,6 @@
 package gridThing;
 
-public class grid
+class grid
 {
     static void gridBuild()
     {
@@ -24,16 +24,18 @@ class xToGrid
 {
     int prevX, prevY;
     String prevNumber;
+    boolean hasLastNum = false;
     void currentNumber()
     {
-        if (prevX != 0 || prevY != 0)
+        if (hasLastNum)
         {
-            prevNumber = gridArray.coords[prevY][prevX];
+            gridArray.coords[prevY][prevX] = prevNumber;
         }
+        prevNumber = gridArray.coords[gridArray.row][gridArray.col];
         gridArray.coords[gridArray.row][gridArray.col] = "x";
         prevY = gridArray.row;
         prevX = gridArray.col;
-        prevNumber = gridArray.coords[prevY][prevX];
+        hasLastNum = true;
     }
 }
 
