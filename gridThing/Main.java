@@ -24,14 +24,13 @@ class Main
                         rebuild.currentNumber();
                         grid.gridBuild();
                         IO.println("Moved Up");
-                        break;
                     }
                     else
                     {
                         grid.gridBuild();
                         IO.println("You hit a wall");
-                        break;
                     }
+                    break;
                 }
                 case "a":
                 {
@@ -41,14 +40,13 @@ class Main
                         rebuild.currentNumber();
                         grid.gridBuild();
                         IO.println("Moved Left");
-                        break;
                     }
                     else
                     {
                         grid.gridBuild();
                         IO.println("You hit a wall");
-                        break;
                     }
+                    break;
                 }
                 case "s":
                 {
@@ -58,14 +56,13 @@ class Main
                         rebuild.currentNumber();
                         grid.gridBuild();
                         IO.println("Moved Down");
-                        break;
                     }
                     else
                     {
                         grid.gridBuild();
                         IO.println("You hit a wall");
-                        break;
                     }
+                    break;
                 }
                 case "d":
                 {
@@ -75,14 +72,13 @@ class Main
                         rebuild.currentNumber();
                         grid.gridBuild();
                         IO.println("Moved Right");
-                        break;
                     }
                     else
                     {
                         grid.gridBuild();
                         IO.println("You hit a wall");
-                        break;
                     }
+                    break;
                 }
                 default:
                 {
