@@ -9,7 +9,7 @@ class Main
     {
         grid.gridBuild();
         xToGrid rebuild = new xToGrid();
-        System.out.println("SEND ONE: W A S D");
+        IO.println("SEND ONE: W A S D");
         while (o)
         {
             Scanner input = new Scanner(System.in);
@@ -23,13 +23,13 @@ class Main
                         gridArray.row--;
                         rebuild.currentNumber();
                         grid.gridBuild();
-                        System.out.println("Moved Up");
+                        IO.println("Moved Up");
                         break;
                     }
                     else
                     {
                         grid.gridBuild();
-                        System.out.println("You hit a wall");
+                        IO.println("You hit a wall");
                         break;
                     }
                 }
@@ -40,13 +40,13 @@ class Main
                         gridArray.col--;
                         rebuild.currentNumber();
                         grid.gridBuild();
-                        System.out.println("Moved Left");
+                        IO.println("Moved Left");
                         break;
                     }
                     else
                     {
                         grid.gridBuild();
-                        System.out.println("You hit a wall");
+                        IO.println("You hit a wall");
                         break;
                     }
                 }
@@ -57,13 +57,13 @@ class Main
                         gridArray.row++;
                         rebuild.currentNumber();
                         grid.gridBuild();
-                        System.out.println("Moved Down");
+                        IO.println("Moved Down");
                         break;
                     }
                     else
                     {
                         grid.gridBuild();
-                        System.out.println("You hit a wall");
+                        IO.println("You hit a wall");
                         break;
                     }
                 }
@@ -74,19 +74,19 @@ class Main
                         gridArray.col++;
                         rebuild.currentNumber();
                         grid.gridBuild();
-                        System.out.println("Moved Right");
+                        IO.println("Moved Right");
                         break;
                     }
                     else
                     {
                         grid.gridBuild();
-                        System.out.println("You hit a wall");
+                        IO.println("You hit a wall");
                         break;
                     }
                 }
                 default:
                 {
-                    System.out.println("Wrong key");
+                    IO.println("Wrong key");
                     break;
                 }
             }

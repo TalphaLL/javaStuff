@@ -4,13 +4,13 @@ class grid
 {
     static void gridBuild()
     {
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + gridArray.coords[0][0] + " " + "|" + " " + gridArray.coords[0][1] + " " + "|" + " " + gridArray.coords[0][2] + " " + "|");
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + gridArray.coords[1][0] + " " + "|" + " " + gridArray.coords[1][1] + " " + "|" + " " + gridArray.coords[1][2] + " " + "|");
-        System.out.println("|---|---|---|");
-        System.out.println("|" + " " + gridArray.coords[2][0] + " " + "|" + " " + gridArray.coords[2][1] + " " + "|" + " " + gridArray.coords[2][2] + " " + "|");
-        System.out.println("|---|---|---|");
+        IO.println("|---|---|---|");
+        IO.println("|" + " " + gridArray.coords[0][0] + " " + "|" + " " + gridArray.coords[0][1] + " " + "|" + " " + gridArray.coords[0][2] + " " + "|");
+        IO.println("|---|---|---|");
+        IO.println("|" + " " + gridArray.coords[1][0] + " " + "|" + " " + gridArray.coords[1][1] + " " + "|" + " " + gridArray.coords[1][2] + " " + "|");
+        IO.println("|---|---|---|");
+        IO.println("|" + " " + gridArray.coords[2][0] + " " + "|" + " " + gridArray.coords[2][1] + " " + "|" + " " + gridArray.coords[2][2] + " " + "|");
+        IO.println("|---|---|---|");
     }
 }
 class gridArray
